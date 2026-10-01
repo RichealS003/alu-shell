@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#This script uses the while loop to print Best School 10 times until the 9th iteration where it prints hi and continues
+counter=1
+while [ $counter -le 10 ]; do 
+	echo "Best School"
+	if [ $counter -eq 9 ]; then 
+		echo "Hi"
+	fi
+	((counter++))
+done
