@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+passwd_file="/etc/passwd"
+if [ ! -r "$passwd_file" ]; then
+    echo "Error: Cannot read $passwd_file" >&2
+    exit 1
+fi
+while IFS=: read -r username password uid gid info home shell; do
+    echo "User: $username | UID: $uid | Home: $home"
+done < "$passwd_file"
