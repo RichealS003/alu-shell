@@ -7,5 +7,6 @@ if [ ! -e "$passwd_file" ]; then
     exit 1
 fi
 while IFS=: read -r username password uid gid info home shell; do
+
     echo "User: $username | UID: $uid | Home: $home"
 done < "$passwd_file"
