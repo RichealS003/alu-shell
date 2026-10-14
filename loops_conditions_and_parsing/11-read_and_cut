@@ -2,7 +2,7 @@
 # Define the file path
 passwd_file="/etc/passwd"
 
-if [ ! -r "$passwd_file" ]; then
+if [ ! -e "$passwd_file" ]; then
     echo "Error: Cannot read $passwd_file" >&2
     exit 1
 fi
